@@ -51,7 +51,7 @@
             <div class="nav-upper-options">
                   <div class="nav-option option1">
                     <i class="fa-solid fa-table"></i>
-                    <h3> Tableau</h3>
+                    <h3> <a href="/html/admin.html">Tableau</a></h3>
                   </div>
         
                   <div class="option2 nav-option">
@@ -88,10 +88,12 @@
       <div class="main">
         <div class="container">
           <div class="title-content">
-            <h2>Gestion de contacte : <span class="count"></span></h2>
-      
-            <!-- Trigger/Open The Modal -->
-            <button id="addContactModalButton">Ajouer contact</button>
+            <div class="thead">
+                <h2>Listes des travaillleurs: <span class="count"></span></h2>
+        
+              <!-- Trigger/Open The Modal -->
+              <button id="addContactModalButton">Ajouer contact</button>
+            </div>
       
             <!-- The Modal -->
             <div id="contactModal" class="modal">
@@ -100,18 +102,59 @@
               <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="form-container">
-                  <form method="post">
-                    <label for="name">Nom complet:</label>
-                    <input class="form-control" required type="text" id="name" name="name">
-                    
-                    <label for="name">Tache :</label>
-                    <input class="form-control" required type="text" id="tache" name="name">
-                    
-                    <label for="email">Email:</label>
-                    <input class="form-control" required type="email" id="email" name="email">
-                    <label for="telephone">Telephone:</label>
-                    <input class="form-control" required type="number" id="telephone" name="telephone">
-                    <button type="submit" class="addContactButton">Ajouter </button>
+                  <form class="form" method="post">
+                        <div class="champ">  
+                              <div>
+                                  <label for="email">Email:</label>
+                                  <input class="form-control" required type="email" id="email" name="email">
+                              </div>
+                              <div>
+                                  <label for="name">Nom complet:</label>
+                                  <input class="form-control" required type="text" id="name" name="name">
+                              </div>
+                          </div>
+                          
+                         
+                        <div class="champ"> 
+                              <div>
+                                <label for="telephone">Telephone:</label>
+                                <input class="form-control" required type="number" id="telephone" name="telephone">
+                              </div>
+                              
+                              <div>
+                                <label for="date">Date D'arrive:</label>
+                                <input class="form-control" required type="datetime-local" id="date" name="date">
+                              </div>
+                        </div>
+                        
+                        <div class="champ">
+                          
+                          <div >
+                            <label for="Genre">Sexe:</label>
+                            <select name="Genre" id="Sexe" class="form-control">
+                                  <option value="1">Masculin</option>
+                                  <option value="2">Feminin</option>
+                            </select>
+                            
+                          </div>
+                          <div >
+                            <label for="Genre">Tache:</label>
+                            <select name="Genre" id="tache" class="form-control">
+                                  <option value="1">broyeur</option>
+                                  <option value="2">Chauffeur</option>
+                            </select>
+                            
+                          </div>
+                        </div>
+                        <!-- <div>
+                          <label for="telephone">Tache:</label>
+                          <input class="form-control" required type="text" id="tache" name="tache">  
+                        </div> -->
+                        <div>
+
+                        </div>
+                        
+                        <button type="submit" class="addContactButton">Ajouter </button>
                   </form>
                 </div>
               </div>
@@ -122,8 +165,10 @@
                   <tr>
                     <th>Nom complet</th>
                     <th>Email</th>
-                    <th>Tache</th>
                     <th>Telephone</th>
+                    <th>Genre</th>
+                    <th>Date D'arrive</th>
+                    <th>Tache</th>
                     <th>Actions</th>
                   </tr>
                 </table>
@@ -131,23 +176,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="searchbar2">
-          <input type="text"
-            name=""
-            id=""
-            placeholder="Search">
-          <div class="searchbtn">
-          <img src=
-  "https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-              class="icn srchicn"
-              alt="search-button">
-          </div>
-        </div>
-  
-        <div class="box-container">
-
-
-        </div> -->
+        
     </div>
   
    
