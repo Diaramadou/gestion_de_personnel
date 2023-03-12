@@ -7,8 +7,8 @@ function getContacts() {
 let initialContacts = getContacts() || []
 
 const countElement = document.querySelector('.count')
-const table = document.querySelector('.table')
-const tblBody = document.createElement('tbody')
+          const table = document.querySelector('.table')
+            const tblBody = document.createElement('tbody')
 
 // function counter
 function setCount(count) {
